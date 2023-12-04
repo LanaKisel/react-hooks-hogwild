@@ -1,16 +1,14 @@
 import React from 'react'
 import hogs from '../porkers_data'
 
-const Filter = ({isGreased, filterGreased, sort, updateSort}) => {
+const Filter = ({isGreased, filterGreased, updateSort}) => {
 
   function handleClick(){
     filterGreased()
-    console.log("filter works")
   }
 
   function handleSortChange(e){
     updateSort(e.target.value)
-    console.log("in filter", e.target.value )
   }
   return (
     <>

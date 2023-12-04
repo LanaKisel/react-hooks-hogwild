@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
- function Hog({image, name, specialty, weight, greased,  highestMedalAchieved, onHogClick }) {
+ function Hog({image, name, specialty, weight, greased,  highestMedalAchieved }) {
 
    const [clicked, setClick] = useState(false)
 

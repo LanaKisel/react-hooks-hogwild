@@ -2,7 +2,7 @@ import React from 'react';
 import Hog from './Hog';
 import NewHogForm from './NewHogForm';
 
-const HogsList = ({hogs, onHogClick, isGreased, sort}) => {
+const HogsList = ({hogs, isGreased, sort}) => {
 
   const displayHogs = hogs
     .filter((hog) => isGreased === hog.greased)
@@ -30,7 +30,7 @@ const HogsList = ({hogs, onHogClick, isGreased, sort}) => {
           return 0;
       }
     })
-    .map(hog => <Hog className="ui grid container" key={hog.name} onHogClick={onHogClick} highestMedalAchieved={hog["highest medal achieved"]} name={hog.name} specialty={hog.specialty} greased={hog.greased} weight={hog.weight} image={hog.image} />)
+    .map(hog => <Hog className="ui grid container" key={hog.name} highestMedalAchieved={hog["highest medal achieved"]} name={hog.name} specialty={hog.specialty} greased={hog.greased} weight={hog.weight} image={hog.image} />)
 
   return (
     <div>
