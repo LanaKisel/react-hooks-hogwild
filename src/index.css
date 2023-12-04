@@ -140,6 +140,14 @@ ul {
   clear: both;
 }
 
+.details {
+  color: rgb(24, 69, 109);
+  padding: 15px;
+  font-weight: 1000;
+  font-size: larger;
+  font-family:inherit;
+}
+
 
 @keyframes App-logo-spin {
   from {
