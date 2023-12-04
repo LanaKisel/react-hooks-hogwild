@@ -9,8 +9,8 @@ import React, { useState } from 'react'
     }  
 
   return (
-    <div className='"ui grid container"'>
-     <div className='pigTile' key={name}  onClick={onHogClick}>
+    <div className="ui eight wide column">
+     <div className='pigTile'  key={name}  onClick={onHogClick}>
         <div>
           <h3>{name}</h3>
           <img className="pigImage " src={image} alt={name}/> 

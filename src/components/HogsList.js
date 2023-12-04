@@ -9,10 +9,19 @@ const HogsList = ({hogs, onHogClick, isGreased, sort}) => {
     .sort((hogA, hogB) => {
       switch (sort) {
         case "weight ascending":
-          return hogA.weight > hogB.weight;
+          if (hogA.weight>hogB.weight) 
+          { return 1} else if 
+          (hogA.weight<hogB.weight) 
+          { return -2} else if 
+          (hogA.weight=hogB.weight) 
+          {return 0}
         case "weight descending":
-          return hogA.weight < hogB.weight;
-
+          if (hogB.weight>hogA.weight) 
+          { return 1} else if 
+          (hogB.weight<hogA.weight) 
+          { return -2} else if 
+          (hogB.weight=hogA.weight) 
+          {return 0}         
         case "name ascending":
           return hogA.name.localeCompare(hogB.name);
         case "name descending":
@@ -21,7 +30,7 @@ const HogsList = ({hogs, onHogClick, isGreased, sort}) => {
           return 0;
       }
     })
-    .map(hog => <Hog key={hog.name} onHogClick={onHogClick} highestMedalAchieved={hog["highest medal achieved"]} name={hog.name} specialty={hog.specialty} greased={hog.greased} weight={hog.weight} image={hog.image} />)
+    .map(hog => <Hog className="ui grid container" key={hog.name} onHogClick={onHogClick} highestMedalAchieved={hog["highest medal achieved"]} name={hog.name} specialty={hog.specialty} greased={hog.greased} weight={hog.weight} image={hog.image} />)
 
   return (
     <div>
